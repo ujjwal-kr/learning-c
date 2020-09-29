@@ -1,3 +1,6 @@
+NOTES
+=====
+
 Commands to run
 
 1. `gcc program.c -o executable`
