@@ -3,9 +3,7 @@
 #include<stdio.h> 
 
 int main() { 
-
-    // Strings
-
+    
 	char a[] = "Ujjwal"; 
     char b[] = "Is"; 
     char c[] = "Awesome"; 
