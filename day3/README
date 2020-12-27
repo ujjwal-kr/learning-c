@@ -1,0 +1,17 @@
+$: objdump -D ./loop | grep -A20 main.:
+
+1149:	f3 0f 1e fa          	endbr64
+114d:	55                   	push   %rbp
+114e:	48 89 e5             	mov    %rsp,%rbp
+1151:	48 83 ec 10          	sub    $0x10,%rsp
+1155:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+115c:	eb 10                	jmp    116e <main+0x25>
+115e:	48 8d 3d 9f 0e 00 00 	lea    0xe9f(%rip),%rdi        # 2004 <_IO_stdin_used+0x4>
+1165:	e8 e6 fe ff ff       	callq  1050 <puts@plt>
+116a:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+116e:	83 7d fc 09          	cmpl   $0x9,-0x4(%rbp)
+1172:	7e ea                	jle    115e <main+0x15>
+1174:	b8 00 00 00 00       	mov    $0x0,%eax
+1179:	c9                   	leaveq
+117a:	c3                   	retq
+117b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
